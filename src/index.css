@@ -8,6 +8,7 @@
    counter-reset: num;
 }
 .ul-num .li-num::before {
-   content: counter(num) " .";
+   content: counter(num) ".";
    counter-increment: num;
+   padding-right: 10px;
 }

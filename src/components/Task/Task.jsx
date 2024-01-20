@@ -6,8 +6,7 @@ function Task({ task, toggleChecked, removeTask }) {
          className="flex justify-between bg-gray-700 px-5 py-3 rounded-lg hover:bg-gray-600 transition-all"
          
       >
-         <span className="li-num"></span>
-         <span className="capitalize">{task.text}</span>
+         <span className="li-num capitalize">{task.text}</span>
          <div className="inline-flex items-center gap-4">
             <input 
                type="checkbox" 
