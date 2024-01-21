@@ -37,7 +37,7 @@ function AddTaskForm ({ addTask }) {
                   {...register('text_task')}
                   type="text"
                   placeholder='Enter task'
-                  className='w-full pl-4 pr-12 py-2 text-gray-800 rounded-md focus:outline-none focus:ring focus:ring-violet-400 transition-all'
+                  className='w-full pl-4 pr-12 py-3 bg-white text-gray-800 rounded-md focus:outline-none focus:ring focus:ring-violet-400 transition-all'
                />
                {<span className="absolute text-sm left-1 -bottom-6">{errors.text_task?.message}</span>}
             </div>
