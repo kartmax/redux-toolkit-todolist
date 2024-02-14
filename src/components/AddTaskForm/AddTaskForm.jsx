@@ -5,12 +5,12 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { taskShemas } from "./shemas";
 
 
-function AddTaskForm({ methodSubmit, idTask = null, offIsEdit = null }) {
+function AddTaskForm({ methodSubmit, placeholder, idTask = null, textCurrent = null, offIsEdit = null }) {
     const [isLoading, setIsLoading] = useState(false);
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm({
         mode: "onChange",
-        resolver: yupResolver(taskShemas)
+        resolver: yupResolver(taskShemas),
     });
 
     const onSubmit = (data) => {
@@ -37,7 +37,7 @@ function AddTaskForm({ methodSubmit, idTask = null, offIsEdit = null }) {
                     <input
                         {...register('text_task')}
                         type="text"
-                        placeholder='Enter task'
+                        placeholder={placeholder}
                         className='w-full pl-4 pr-12 py-3 bg-white text-gray-800 rounded-md focus:outline-none focus:ring focus:ring-violet-400 transition-all'
                     />
                     {<span className="absolute text-sm left-1 -bottom-6">{errors.text_task?.message}</span>}
